@@ -9,8 +9,11 @@ elif operatorq == "-":
     result = num1 - num2
     print(f"{num1} - {num2} = {result}")
 elif operatorq == "/":
-    result = num1 / num2
-    print(f"{num1} / {num2} = {result}")
+    try:
+        result = num1 / num2
+        print(f"{num1} / {num2} = {result}")
+    except ZeroDivisionError:
+        print("num2 cannot be 0")
 elif operatorq == "^":
     result = num1 ** num2
     print(f"{num1} ^ {num2} = {result}")
@@ -18,4 +21,5 @@ elif operatorq == "*":
     result = num1 * num2
     print(f"{num1} * {num2} = {result}")
 else:
+
     print("Wrong operator input!!!")
